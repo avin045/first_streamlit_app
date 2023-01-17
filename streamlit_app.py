@@ -40,6 +40,14 @@ streamlit.dataframe(fruits_to_show);
 streamlit.header("Fruityvice Fruit Advice!");
 
 # RESPONSE from REQUESTS
-fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
+# fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
+fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + "kiwi");
 # streamlit.text(fruityvice_response)
-streamlit. text ( fruityvice_response.json())
+# streamlit.text(fruityvice_response.json()) # just writes the data to the screen
+
+# CONVERTS json data to Structured(Normalized) Format
+fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
+
+# Display the Normalized(structured) Data
+streamlit.dataframe(fruityvice_normalized)
+
