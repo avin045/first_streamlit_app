@@ -55,13 +55,13 @@ try:
         streamlit.error("Please select a fruit to get information")
     else:
         back_from_function = get_fruityvice_data(fruit_choice)
-        streamlit.dataframe(fruityvice_normalized); # Display the Normalized(structured) Data
+        streamlit.dataframe(back_from_function); # Display the Normalized(structured) Data
 except URLError as e:
     streamlit.error();
 
 
 # -------------------------------------------------- USER INPUT FOR REQUEST -------------------------------------------------- #
-streamlit.write('The user entered ', fruit_choice)
+# streamlit.write('The user entered ', fruit_choice)
 
 # -------------------------------------------------- RESPONSE from REQUESTS -------------------------------------------------- #
 # fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
