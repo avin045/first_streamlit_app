@@ -69,7 +69,7 @@ except URLError as e:
 # streamlit.text(fruityvice_response.json()) # just writes the data to the screen
 
 
-streamlit.stop();
+# streamlit.stop();
 
 # ------------------------------------------- snowflake codes ------------------------------------------- #
 
