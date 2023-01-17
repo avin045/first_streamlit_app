@@ -57,6 +57,7 @@ fruityvice_normalized = pd.json_normalize(fruityvice_response.json())
 # Display the Normalized(structured) Data
 streamlit.dataframe(fruityvice_normalized)
 
+streamlit.stop()
 # ------------------------------------------- snowflake codes ------------------------------------------- #
 my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
 my_cur = my_cnx.cursor()
