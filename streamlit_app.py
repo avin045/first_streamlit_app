@@ -46,7 +46,7 @@ fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + "kiwi")
 # streamlit.text(fruityvice_response.json()) # just writes the data to the screen
 
 # CONVERTS json data to Structured(Normalized) Format
-fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
+fruityvice_normalized = pd.json_normalize(fruityvice_response.json())
 
 # Display the Normalized(structured) Data
 streamlit.dataframe(fruityvice_normalized)
